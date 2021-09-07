@@ -31,4 +31,4 @@ document.querySelector(".out-3").innerHTML = d4.toDateString();
 // Fri Dec 13 1991
 
 document.querySelector(".out-4").innerHTML = d4.toISOString();
-// 1991-12-13T10:02:40.000Z
+// 1991-12-13T10:02:40.000Z   123
