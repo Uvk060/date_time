@@ -31,4 +31,43 @@ document.querySelector(".out-3").innerHTML = d4.toDateString();
 // Fri Dec 13 1991
 
 document.querySelector(".out-4").innerHTML = d4.toISOString();
-// 1991-12-13T10:02:40.000Z   123
+// 1991-12-13T10:02:40.000Z
+
+//metods
+const d20 = new Date();
+console.log(d20.getFullYear()); // 2021
+console.log(d20.getMonth()); // 8    this is september because 0,1,2 to 11
+console.log(d20.getDate()); // 7    date today
+console.log(d20.getDay()); // 2    (thu)  day of the week, start -sunday = 0, sat = 6.
+console.log(d20.getHours()); // 16
+
+console.log(d20.getTime()); // 1631021330294  - unixTime
+console.log(Date.now()); // 1631021436782 - unixTime
+
+function addLedingZero(d) {
+  return d < 10 ? "0" + d : d;
+}
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+const dateDate = new Date(1601000430082);
+
+function getUserTime(t) {
+  let Y = t.getFullYear();
+  let M = addLedingZero(t.getMonth() + 1);
+  let D = addLedingZero(t.getDate());
+  let w = days[t.getDay()];
+  let h = addLedingZero(t.getHours());
+  let m = addLedingZero(t.getMinutes());
+  console.log(Y, M, D, w, h, m); //2020 "09" 25 "Friday" "05" 20
+  return `${Y}.${M}.${D}  ${h}:${m} (${w})`;
+}
+
+console.log(getUserTime(dateDate));
