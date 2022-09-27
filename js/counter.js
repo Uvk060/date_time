@@ -5,7 +5,7 @@ move();
 function move() {
   counter.style.marginLeft = shift + "px";
   shift += 10;
-  setTimeout(move, 1000);
+  setTimeout(move, 2000);
 }
 //setInterval(function_name, time)
 //let timerStop = setInterval(move, 30);
