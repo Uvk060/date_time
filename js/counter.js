@@ -1,11 +1,12 @@
 let shift = 0;
+let timeout = 2000;
 
 let counter = document.getElementById("counter");
 move();
 function move() {
   counter.style.marginLeft = shift + "px";
   shift += 10;
-  setTimeout(move, 2000);
+  setTimeout(move, timeout);
 }
 //setInterval(function_name, time)
 //let timerStop = setInterval(move, 30);
