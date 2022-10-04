@@ -1,5 +1,5 @@
 let shift = 0;
-let timeout = 2000;
+let timeout = 3000;
 
 let counter = document.getElementById("counter");
 move();
